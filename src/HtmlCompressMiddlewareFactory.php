@@ -15,8 +15,6 @@ class HtmlCompressMiddlewareFactory
      */
     public function __invoke() : HtmlCompressMiddleware
     {
-        $parser = Factory::construct();
-
-        return new HtmlCompressMiddleware($parser);
+        return new HtmlCompressMiddleware(Factory::construct());
     }
 }
