@@ -7,6 +7,7 @@ use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Server\RequestHandlerInterface;
 use WyriHaximus\HtmlCompress\Parser;
+use Zend\Diactoros\Stream;
 
 /**
  * Class HtmlCompressMiddleware
@@ -32,6 +33,7 @@ class HtmlCompressMiddleware implements MiddlewareInterface
      * @param ServerRequestInterface $request
      * @param RequestHandlerInterface $handler
      * @return ResponseInterface
+     * @throws \InvalidArgumentException
      * @throws \RuntimeException
      */
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler) : ResponseInterface
@@ -45,8 +47,7 @@ class HtmlCompressMiddleware implements MiddlewareInterface
         }
 
         $compressedBody = $this->parser->compress($response->getBody()->getContents());
-        $response->getBody()->write($compressedBody);
 
-        return $response;
+        return $response->withBody(new Stream($compressedBody));
     }
 }
