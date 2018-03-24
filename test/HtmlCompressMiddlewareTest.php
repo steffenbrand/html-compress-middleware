@@ -5,8 +5,8 @@ namespace SteffenBrand\HtmlCompressMiddleware\Test;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Class BambooClientIntegrationTest
- * @package SteffenBrand\BambooApiClient\Test
+ * Class HtmlCompressMiddlewareTest
+ * @package SteffenBrand\HtmlCompressMiddleware\Test
  */
 class HtmlCompressMiddlewareTest extends TestCase
 {

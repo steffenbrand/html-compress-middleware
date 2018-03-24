@@ -9,8 +9,8 @@ use Psr\Http\Server\RequestHandlerInterface;
 use WyriHaximus\HtmlCompress\Parser;
 
 /**
- * Class UrlHelperMiddleware
- * @package Zend\Expressive\Helper
+ * Class HtmlCompressMiddleware
+ * @package SteffenBrand\HtmlCompressMiddleware
  */
 class HtmlCompressMiddleware implements MiddlewareInterface
 {
