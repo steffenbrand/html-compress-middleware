@@ -47,7 +47,8 @@ class HtmlCompressMiddleware implements MiddlewareInterface
         }
 
         $compressedBody = $this->parser->compress($response->getBody()->getContents());
+        $streamBody = fopen('data:text/plain,' . $compressedBody, 'rb');
 
-        return $response->withBody(new Stream($compressedBody));
+        return $response->withBody(new Stream($streamBody));
     }
 }
