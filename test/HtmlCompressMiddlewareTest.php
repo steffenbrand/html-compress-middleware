@@ -1,6 +1,6 @@
 <?php
 
-namespace SteffenBrand\BambooApiClient\Test;
+namespace SteffenBrand\HtmlCompressMiddleware\Test;
 
 use PHPUnit\Framework\TestCase;
 
