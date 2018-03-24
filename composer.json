@@ -1,0 +1,36 @@
+{
+  "name": "steffenbrand/html-compress-middleware",
+  "description": "HTML Compress Middleware",
+  "homepage": "https://github.com/steffenbrand/html-compress-middleware",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Steffen Brand",
+      "email": "s.brand@steffenbrand.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=7.1",
+    "psr/container": "^1.0",
+    "psr/http-message": "^1.0.1",
+    "psr/http-server-middleware": "^1.0",
+    "wyrihaximus/html-compress": "^1.4"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "SteffenBrand\\HtmlCompressMiddleware\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "SteffenBrand\\HtmlCompressMiddleware\\Test\\": "test/"
+    }
+  },
+  "config": {
+    "bin-dir": "bin"
+  }
+}
