@@ -34,7 +34,6 @@ class HtmlCompressMiddleware implements MiddlewareInterface
      * @param RequestHandlerInterface $handler
      * @return ResponseInterface
      * @throws \InvalidArgumentException
-     * @throws \RuntimeException
      */
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler) : ResponseInterface
     {
