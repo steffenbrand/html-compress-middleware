@@ -13,7 +13,7 @@ class HtmlCompressMiddlewareFactory
     /**
      * @return HtmlCompressMiddleware
      */
-    public function __invoke() : HtmlCompressMiddleware
+    public function __invoke(): HtmlCompressMiddleware
     {
         return new HtmlCompressMiddleware(Factory::construct());
     }
