@@ -46,25 +46,6 @@ return [
         ],
     ],
 ];
-
-```
-
-Add the middleware to your `config/autoload/dependencies.global.php`
-
-```php
-return [
-    // Provides application-wide services.
-    // We recommend using fully-qualified class names whenever possible as
-    // service names.
-    'dependencies' => [
-        ...
-        'factories'  => [
-            // Fully\Qualified\ClassName::class => Fully\Qualified\FactoryName::class,
-            \SteffenBrand\HtmlCompressMiddleware\HtmlCompressMiddleware::class => \SteffenBrand\HtmlCompressMiddleware\HtmlCompressMiddlewareFactory::class,
-        ],
-    ],
-];
-
 ```
 
 ### Enable compression
