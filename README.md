@@ -1,3 +1,5 @@
+[![Latest Stable Version](https://poser.pugx.org/steffenbrand/html-compress-middleware/v/stable)](https://packagist.org/packages/steffenbrand/html-compress-middleware)
+[![Total Downloads](https://poser.pugx.org/steffenbrand/html-compress-middleware/downloads)](https://packagist.org/packages/steffenbrand/html-compress-middleware)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/steffenbrand/html-compress-middleware/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/steffenbrand/html-compress-middleware/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/steffenbrand/html-compress-middleware/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/steffenbrand/html-compress-middleware/?branch=master)
 
