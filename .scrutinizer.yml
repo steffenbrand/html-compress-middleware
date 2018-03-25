@@ -7,9 +7,9 @@ build:
     tests:
         override:
             -
-                command: 'vendor/bin/phpunit --coverage-clover=coverage-file'
+                command: 'vendor/bin/phpunit --coverage-clover=clover'
                 coverage:
-                    file: 'coverage-file'
+                    file: 'clover'
                     format: 'clover'
 checks:
     php: true
