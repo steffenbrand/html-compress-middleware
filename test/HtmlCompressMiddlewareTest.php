@@ -5,8 +5,6 @@ namespace SteffenBrand\HtmlCompressMiddleware\Test;
 use PHPUnit\Framework\TestCase;
 use SteffenBrand\HtmlCompressMiddleware\HtmlCompressMiddleware;
 use SteffenBrand\HtmlCompressMiddleware\HtmlCompressMiddlewareFactory;
-use SteffenBrand\HtmlCompressMiddleware\Test\RequestHandler\MockHtmlRequestHandler;
-use SteffenBrand\HtmlCompressMiddleware\Test\RequestHandler\MockJsonRequestHandler;
 use Zend\Diactoros\ServerRequest;
 use Zend\Diactoros\Stream;
 
@@ -37,14 +35,14 @@ class HtmlCompressMiddlewareTest extends TestCase
 
     public function testHtmlResponseIsCompressed(): void
     {
-        $response = $this->middleware->process($this->request, new MockHtmlRequestHandler());
+        $response = $this->middleware->process($this->request, new MockRequestHandler('text/html'));
 
         $this->assertEquals('test test', $response->getBody()->getContents());
     }
 
     public function testJsonResponseIsNotCompressed(): void
     {
-        $response = $this->middleware->process($this->request, new MockJsonRequestHandler());
+        $response = $this->middleware->process($this->request, new MockRequestHandler('application/json'));
 
         $this->assertEquals('test' . PHP_EOL . 'test', $response->getBody()->getContents());
     }
