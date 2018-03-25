@@ -6,7 +6,7 @@ use Psr\Container\ContainerInterface;
 
 /**
  * Class MockContainer
- * @package SteffenBrand\HtmlCompressMiddleware\Test
+ * @package SteffenBrand\HtmlCompressMiddleware\Test\Mock
  */
 class MockContainer implements ContainerInterface
 {

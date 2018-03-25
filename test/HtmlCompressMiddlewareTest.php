@@ -20,10 +20,6 @@ class HtmlCompressMiddlewareTest extends TestCase
      */
     private $request;
 
-    /**
-     * @throws \Psr\Container\ContainerExceptionInterface
-     * @throws \Psr\Container\NotFoundExceptionInterface
-     */
     public function setUp()
     {
         $this->request = new ServerRequest();

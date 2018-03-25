@@ -9,7 +9,7 @@ use Zend\Diactoros\Response;
 
 /**
  * Class MockRequestHandler
- * @package SteffenBrand\HtmlCompressMiddleware\Test
+ * @package SteffenBrand\HtmlCompressMiddleware\Test\Mock
  */
 class MockRequestHandler implements RequestHandlerInterface
 {
@@ -18,12 +18,20 @@ class MockRequestHandler implements RequestHandlerInterface
      */
     private $response;
 
+    /**
+     * MockRequestHandler constructor.
+     * @param string $contentType
+     */
     public function __construct(string $contentType)
     {
         $this->response = new Response();
         $this->response = $this->response->withHeader('Content-Type', $contentType);
     }
 
+    /**
+     * @param ServerRequestInterface $request
+     * @return ResponseInterface
+     */
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
         $this->response = $this->response->withBody($request->getBody());
