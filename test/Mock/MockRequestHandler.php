@@ -1,6 +1,6 @@
 <?php
 
-namespace SteffenBrand\HtmlCompressMiddleware\Test;
+namespace SteffenBrand\HtmlCompressMiddleware\Test\Mock;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;

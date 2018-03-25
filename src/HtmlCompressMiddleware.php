@@ -21,13 +21,20 @@ class HtmlCompressMiddleware implements MiddlewareInterface
     private $parser;
 
     /**
+     * @var bool
+     */
+    private $debug;
+
+    /**
      * HtmlCompressMiddleware constructor.
      * @param Parser $parser
+     * @param bool $debug
      */
-    public function __construct(Parser $parser)
+    public function __construct(Parser $parser, bool $debug)
     {
         $this->parser = $parser;
-    }
+        $this->debug = $debug;
+     }
 
     /**
      * @param ServerRequestInterface $request
@@ -39,7 +46,8 @@ class HtmlCompressMiddleware implements MiddlewareInterface
     {
         $response = $handler->handle($request);
 
-        if (strpos($response->getHeaderLine('Content-Type'), 'text/html') === false ||
+        if ($this->debug === true ||
+            strpos($response->getHeaderLine('Content-Type'), 'text/html') === false ||
             $response->getBody()->getSize() < 1)
         {
             return $response;

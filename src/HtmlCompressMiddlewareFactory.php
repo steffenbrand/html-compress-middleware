@@ -2,6 +2,7 @@
 
 namespace SteffenBrand\HtmlCompressMiddleware;
 
+use Psr\Container\ContainerInterface;
 use WyriHaximus\HtmlCompress\Factory;
 
 /**
@@ -11,10 +12,16 @@ use WyriHaximus\HtmlCompress\Factory;
 class HtmlCompressMiddlewareFactory
 {
     /**
+     * @param ContainerInterface $container
      * @return HtmlCompressMiddleware
+     * @throws \Psr\Container\ContainerExceptionInterface
+     * @throws \Psr\Container\NotFoundExceptionInterface
      */
-    public function __invoke(): HtmlCompressMiddleware
+    public function __invoke(ContainerInterface $container): HtmlCompressMiddleware
     {
-        return new HtmlCompressMiddleware(Factory::construct());
+        $config = $container->has('config') ? $container->get('config') : [];
+        $debug = $config['debug'] ?? false;
+
+        return new HtmlCompressMiddleware(Factory::construct(), $debug);
     }
 }
