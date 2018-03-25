@@ -1,3 +1,6 @@
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/steffenbrand/html-compress-middleware/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/steffenbrand/html-compress-middleware/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/steffenbrand/html-compress-middleware/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/steffenbrand/html-compress-middleware/?branch=master)
+
 # HTML Compress Middleware
 PSR-15 compliant middleware to compress html responses.
 
