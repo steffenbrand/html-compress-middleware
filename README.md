@@ -7,8 +7,8 @@
 # HTML Compress Middleware
 PSR-15 compliant middleware to compress html responses.
 
-* [CurrCurr on Packagist](https://packagist.org/packages/steffenbrand/html-compress-middleware)
-* [CurrCurr on GitHub](https://github.com/steffenbrand/html-compress-middleware)
+* [HTML Compress Middleware on Packagist](https://packagist.org/packages/steffenbrand/html-compress-middleware)
+* [HTML Compress Middleware on GitHub](https://github.com/steffenbrand/html-compress-middleware)
 
 ![Concept](https://github.com/steffenbrand/html-compress-middleware/blob/master/concept.jpg?raw=true)
 
