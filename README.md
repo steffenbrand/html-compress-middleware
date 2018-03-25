@@ -69,4 +69,4 @@ HTML compression will not run in development mode.
 composer development-enable
 ```
 
-Or Provide your own development-mode settings by editing the file `config/autoload/development.local.php.dist`
+Or provide your own development-mode settings by editing the file `config/autoload/development.local.php.dist`
