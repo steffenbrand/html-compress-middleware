@@ -30,7 +30,8 @@ return function (Application $app, MiddlewareFactory $factory, ContainerInterfac
  }
 ```
 
-Add the middleware to your `config/autoload/dependencies.global.php`
+Add the middleware to your `config/autoload/dependencies.global.php`  
+Or use it as a [routed middleware](https://zendframework.github.io/zend-expressive/v3/getting-started/features/#flow-overview), if you don't want the middleware to be invoked on certain routes.
 
 ```php
 return [
